@@ -26,7 +26,7 @@ export default function App() {
     setHistory(next);
     setInput("");
 
-    const res = await chat({ variables: { messages: next } });
+    const res:any = await chat({ variables: { messages: next } });
     const reply = res.data?.chat?.reply ?? "(no reply)";
     setHistory([...next, { role: "assistant", content: reply }]);
   }
