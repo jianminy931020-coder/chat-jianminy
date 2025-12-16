@@ -1,0 +1,26 @@
+{
+  // Worker 名字（Cloudflare 上显示用）
+  "name": "chat-api",
+
+  // 入口文件
+  "main": "src/index.ts",
+
+  // Worker 运行环境版本
+  "compatibility_date": "2025-12-01",
+
+  // 非敏感变量（⚠️ 不要放 OPENAI_API_KEY）
+  "vars": {
+    "OPENAI_MODEL": "gpt-4.1-mini"
+  }
+
+  // routes 可以先不写，后面在 Dashboard 绑
+  // 也可以写成下面这样（可选）：
+  /*
+  "routes": [
+    {
+      "pattern": "chat.jianminy.org/graphql*",
+      "zone_name": "jianminy.org"
+    }
+  ]
+  */
+}
